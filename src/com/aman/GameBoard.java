@@ -1,11 +1,14 @@
-package com.aman.dto;
+package com.aman;
 
+import com.aman.dto.LadderDto;
+import com.aman.dto.PlayerDto;
+import com.aman.dto.SnakeDto;
 import com.aman.exceptions.BadInputException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
-public class GameBoardDto {
+public class GameBoard {
     private final Map<PlayerDto, Integer> players = new HashMap<>();
 
     private final Map<Integer, SnakeDto> snakes = new HashMap<>();

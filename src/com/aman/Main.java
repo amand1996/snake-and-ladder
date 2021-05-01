@@ -1,6 +1,5 @@
 package com.aman;
 
-import com.aman.dto.GameBoardDto;
 import com.aman.dto.LadderDto;
 import com.aman.dto.PlayerDto;
 import com.aman.dto.SnakeDto;
@@ -14,7 +13,7 @@ public class Main {
     public static void main(String[] args) {
 
         System.out.println("Welcome to the Snake & Ladder game!");
-        GameBoardDto game = new GameBoardDto();
+        GameBoard game = new GameBoard();
 
         initPlayers(game);
         initLadders(game);
@@ -23,7 +22,7 @@ public class Main {
         startGame(game);
     }
 
-    private static void startGame(GameBoardDto game) {
+    private static void startGame(GameBoard game) {
         while (!game.gameOver()) {
             game.rollDie();
             System.out.println("Press any key to roll the die:");
@@ -31,7 +30,7 @@ public class Main {
         }
     }
 
-    private static void initSnakes(GameBoardDto game) {
+    private static void initSnakes(GameBoard game) {
         System.out.println("enter the number of snakes: ");
         int numSnakes = scanner.nextInt();
         scanner.nextLine();
@@ -50,7 +49,7 @@ public class Main {
         game.printSnakes();
     }
 
-    private static void initLadders(GameBoardDto game) {
+    private static void initLadders(GameBoard game) {
         System.out.println("enter the number of ladders: ");
         int numLadders = scanner.nextInt();
         scanner.nextLine();
@@ -69,7 +68,7 @@ public class Main {
         game.printLadders();
     }
 
-    private static void initPlayers(GameBoardDto game) {
+    private static void initPlayers(GameBoard game) {
         System.out.println("enter the number of players: ");
 
         int numPlayers = scanner.nextInt();
